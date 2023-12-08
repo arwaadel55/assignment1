@@ -6,14 +6,14 @@ import userModel from "../../../../DB/model/user.model.js";
 
 export const addUser=async (req,res,next)=>{
     try{
-    const {userName, email,heartbeat,motion,age}=req.body
+    const {patientName, email,heartbeat,motion,age}=req.body
     
 
     const checkUser = await userModel.findOne({ email });
     if (checkUser) {
       return res.json({ message: "Email Exist" });
     }
-const user = await userModel.create({ userName, email,heartbeat,motion,age})
+const user = await userModel.create({ patientName, email,heartbeat,motion,age})
 
 return res.status(201).json({ message: "Done", user})
 } catch (error) {

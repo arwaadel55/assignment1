@@ -3,7 +3,7 @@ import { Schema, model } from 'mongoose'
 
 const userSchema = new Schema({
 
-    userName: {
+    patientName: {
         type: String,
         required: true
     },
