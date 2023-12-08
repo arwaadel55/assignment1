@@ -12,7 +12,7 @@ const initApp = (app, express) => {
     app.get('/', (req, res) => res.send('Hello World!'))
 
     app.use('/user', userRouter)
-    
+    app.get('/user',userRouter)
 
     app.use("*" , (req,res)=>{
         return res.json({message:"404 Page Not Found"})
