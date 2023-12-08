@@ -4,7 +4,7 @@ const router = Router();
 
 
 //router.get("/" , userController.getUserModule)
-router.get("/",userController.getUsers)
+router.get("/user",userController.getUsers)
 router.post("/",userController.addUser)
 export default  router
 
