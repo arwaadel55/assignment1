@@ -26,7 +26,7 @@ return res.status(201).json({ message: "Done", user})
 
 export const getUsers=async(req,res,next)=>{
   try {
-  const users = await userModel.findAll({});
+  const users = await userModel.find();
   return res.json({ message: "Done", users });
 } catch (error) {
   return res.json({ message: "Catch error", error, stack: error.stack });
