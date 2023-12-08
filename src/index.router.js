@@ -8,7 +8,7 @@ const initApp = (app, express) => {
     app.use(cors())
 
 
-    var whitelist=['http://127.0.0.1:5500']
+    
     app.get('/', (req, res) => res.send('Hello World!'))
 
     app.use('/user', userRouter)
